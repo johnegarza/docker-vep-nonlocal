@@ -7,7 +7,7 @@ LABEL \
 USER root
 
 WORKDIR /
-RUN ln -s /opt/vep/ensembl-vep/vep /usr/bin/variant_effect_predictor.pl
+RUN ln -s /opt/vep/src/ensembl-vep/vep /usr/bin/variant_effect_predictor.pl
 
 RUN mkdir -p /home/vep/Plugins
 WORKDIR /home/vep/Plugins
