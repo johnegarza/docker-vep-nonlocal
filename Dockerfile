@@ -12,10 +12,14 @@ RUN ln -s /opt/vep/src/ensembl-vep/vep /usr/bin/variant_effect_predictor.pl
 WORKDIR /opt/vep/src/ensembl-vep
 RUN perl INSTALL.pl --NO_UPDATE
 
-WORKDIR /
+#WORKDIR /
 
-RUN mkdir -p /home/vep/Plugins
-WORKDIR /home/vep/Plugins
+#RUN mkdir -p /home/vep/Plugins
+#WORKDIR /opt/lib/perl/VEP/Plugins
+
+RUN mkdir -p /opt/lib/perl/VEP/Plugins
+WORKDIR /opt/lib/perl/VEP/Plugins
+
 RUN wget https://raw.githubusercontent.com/Ensembl/VEP_plugins/release/90/Downstream.pm
 RUN wget https://raw.githubusercontent.com/griffithlab/pVACtools/master/tools/pvacseq/VEP_plugins/Wildtype.pm
 
