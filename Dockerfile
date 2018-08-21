@@ -13,6 +13,7 @@ libipc-run-perl
 #necessary because some legacy cwl files still refer to vep (the current name) as variant_effect_predictor.pl
 WORKDIR /
 RUN ln -s /opt/vep/src/ensembl-vep/vep /usr/bin/variant_effect_predictor.pl
+RUN ln -s /opt/vep/src/ensembl-vep/filter_vep /opt/vep/ensembl-vep/filter_vep
 
 WORKDIR /opt/vep/src/ensembl-vep
 RUN perl INSTALL.pl --NO_UPDATE
